@@ -6,6 +6,8 @@ public class Main {
 		DataHora client = service.getDataHoraImpPort();
 		
 		System.out.println(client.get());
-		
+		System.out.println(client.get());
+		System.out.println(client.get());
+			
 	}
 }
