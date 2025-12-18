@@ -1,4 +1,4 @@
-package exer7;
+package exer9;
 
 import java.util.Set;
 
@@ -7,7 +7,7 @@ import javax.xml.ws.handler.MessageContext;
 import javax.xml.ws.handler.soap.SOAPHandler;
 import javax.xml.ws.handler.soap.SOAPMessageContext;
 
-public class HandlerLog implements SOAPHandler<SOAPMessageContext> {
+public class HandlerClienteLog implements SOAPHandler<SOAPMessageContext> {
 
 	
 	@Override
@@ -16,10 +16,10 @@ public class HandlerLog implements SOAPHandler<SOAPMessageContext> {
 		Boolean saida = (Boolean) context.get(SOAPMessageContext.MESSAGE_OUTBOUND_PROPERTY);
 		
 		if(saida) {
-			System.out.println("LOG - Saindo a mensagem soap");
+			System.out.println("Cliente Log - Saindo a mensagem soap");
 			log(context);
 		}else {
-			System.out.println("LOG - Chegando a mensagem soap");
+			System.out.println("Cliente Log - Chegando a mensagem soap");
 			log(context);
 		}
 		
